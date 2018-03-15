@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Seminaris</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Da</th>
+      <th>Al</th>
+      <th>Luogo</th>
+      <th>Nazione</th>
+      <th>Titolo</th>
+      <th>Descrizione</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @seminaris.each do |seminari| %>
+      <tr>
+        <td><%= seminari.da %></td>
+        <td><%= seminari.al %></td>
+        <td><%= seminari.luogo %></td>
+        <td><%= seminari.nazione %></td>
+        <td><%= seminari.titolo %></td>
+        <td><%= seminari.descrizione %></td>
+        <td><%= link_to 'Show', seminari %></td>
+        <td><%= link_to 'Edit', edit_seminari_path(seminari) %></td>
+        <td><%= link_to 'Destroy', seminari, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Seminari', new_seminari_path %>

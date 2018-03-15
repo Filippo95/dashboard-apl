@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Da:</strong>
+  <%= @seminari.da %>
+</p>
+
+<p>
+  <strong>Al:</strong>
+  <%= @seminari.al %>
+</p>
+
+<p>
+  <strong>Luogo:</strong>
+  <%= @seminari.luogo %>
+</p>
+
+<p>
+  <strong>Nazione:</strong>
+  <%= @seminari.nazione %>
+</p>
+
+<p>
+  <strong>Titolo:</strong>
+  <%= @seminari.titolo %>
+</p>
+
+<p>
+  <strong>Descrizione:</strong>
+  <%= @seminari.descrizione %>
+</p>
+
+<%= link_to 'Edit', edit_seminari_path(@seminari) %> |
+<%= link_to 'Back', seminaris_path %>

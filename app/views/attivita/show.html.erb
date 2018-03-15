@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @attivitum.data %>
+</p>
+
+<p>
+  <strong>Titolo:</strong>
+  <%= @attivitum.titolo %>
+</p>
+
+<p>
+  <strong>Luogo:</strong>
+  <%= @attivitum.luogo %>
+</p>
+
+<p>
+  <strong>Descrizione:</strong>
+  <%= @attivitum.descrizione %>
+</p>
+
+<%= link_to 'Edit', edit_attivitum_path(@attivitum) %> |
+<%= link_to 'Back', attivita_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@libri) do |f| %>
+  <% if @libri.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@libri.errors.count, "error") %> prohibited this libri from being saved:</h2>
+
+      <ul>
+      <% @libri.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titolo %><br>
+    <%= f.text_field :titolo %>
+  </div>
+  <div class="field">
+    <%= f.label :prezzo %><br>
+    <%= f.text_field :prezzo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

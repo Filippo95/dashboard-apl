@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Corsis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Luogo</th>
+      <th>Titolo</th>
+      <th>Contatto</th>
+      <th>Descrizione</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @corsis.each do |corsi| %>
+      <tr>
+        <td><%= corsi.data %></td>
+        <td><%= corsi.luogo %></td>
+        <td><%= corsi.titolo %></td>
+        <td><%= corsi.contatto %></td>
+        <td><%= corsi.descrizione %></td>
+        <td><%= link_to 'Show', corsi %></td>
+        <td><%= link_to 'Edit', edit_corsi_path(corsi) %></td>
+        <td><%= link_to 'Destroy', corsi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Corsi', new_corsi_path %>

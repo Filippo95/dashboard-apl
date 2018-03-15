@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Attivita</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Titolo</th>
+      <th>Luogo</th>
+      <th>Descrizione</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attivita.each do |attivitum| %>
+      <tr>
+        <td><%= attivitum.data %></td>
+        <td><%= attivitum.titolo %></td>
+        <td><%= attivitum.luogo %></td>
+        <td><%= attivitum.descrizione %></td>
+        <td><%= link_to 'Show', attivitum %></td>
+        <td><%= link_to 'Edit', edit_attivitum_path(attivitum) %></td>
+        <td><%= link_to 'Destroy', attivitum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attivitum', new_attivitum_path %>

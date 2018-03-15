@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  da: 2018-03-15
+  al: 2018-03-15
+  luogo: MyText
+  nazione: MyString
+  titolo: MyString
+  descrizione: MyText
+
+two:
+  da: 2018-03-15
+  al: 2018-03-15
+  luogo: MyText
+  nazione: MyString
+  titolo: MyString
+  descrizione: MyText

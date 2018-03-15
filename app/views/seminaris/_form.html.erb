@@ -1,0 +1,41 @@
+<%= form_for(@seminari) do |f| %>
+  <% if @seminari.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@seminari.errors.count, "error") %> prohibited this seminari from being saved:</h2>
+
+      <ul>
+      <% @seminari.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :da %><br>
+    <%= f.date_select :da %>
+  </div>
+  <div class="field">
+    <%= f.label :al %><br>
+    <%= f.date_select :al %>
+  </div>
+  <div class="field">
+    <%= f.label :luogo %><br>
+    <%= f.text_area :luogo %>
+  </div>
+  <div class="field">
+    <%= f.label :nazione %><br>
+    <%= f.text_field :nazione %>
+  </div>
+  <div class="field">
+    <%= f.label :titolo %><br>
+    <%= f.text_field :titolo %>
+  </div>
+  <div class="field">
+    <%= f.label :descrizione %><br>
+    <%= f.text_area :descrizione %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
